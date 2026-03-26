@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Future Earth – Home</title>
+<link rel="icon" type="image/png" href="earth.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="earth.png" alt="Earth" class="nav-earth-icon"> Future Earth</a>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+  <ul id="navMenu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="content.html">Content</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="earthhomelanding.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content" data-aos="fade-up">
+    <span class="hero-tag">ENVIRONMENTAL AWARENESS PROJECT</span>
+    <h1>What Future Will<br>We Choose?</h1>
+    <p>By 2050, climate change could reshape our planet beyond recognition. But the future is not fixed every decision we make today will determine what Earth becomes tomorrow.</p>
+    <div class="hero-btns">
+      <a href="content.html" class="btn btn-primary">Explore the Future</a>
+      <a href="about.html" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>🌡️ Global temps +1.2°C</span>
+    <span>🌊 Sea levels rising 3.3mm/year</span>
+    <span>🌲 10 million hectares of forest lost yearly</span>
+    <span>♻️ 8 million tons of plastic in oceans annually</span>
+    <span>💨 90% of people breathe polluted air</span>
+    <span>🦋 1 million species threatened with extinction</span>
+    <span>🌡️ Global temps +1.2°C</span>
+    <span>🌊 Sea levels rising 3.3mm/year</span>
+    <span>🌲 10 million hectares of forest lost yearly</span>
+    <span>♻️ 8 million tons of plastic in oceans annually</span>
+    <span>💨 90% of people breathe polluted air</span>
+    <span>🦋 1 million species threatened with extinction</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="two-col">
+      <div class="col-text" data-aos="fade-right">
+        <span class="label">OUR MISSION</span>
+        <h2>Our Planet Is Reaching a Critical Tipping Point</h2>
+        <p>For over 200 years, human activity has shaped Earth’s climate, ecosystems, and oceans in ways never seen before. Today, the pace of change is accelerating, and scientists warn that we are approaching critical thresholds that could be difficult to reverse.</p>
+        <p>But there is still hope. The future is not set in stone. Every choice we make whether as individuals, communities, or governments has the power to protect our planet. Together, we can create a more sustainable world and ensure a thriving future for generations to come.</p>
+        <a href="content.html" class="btn btn-primary" style="margin-top:20px">Discover Solutions →</a>
+      </div>
+      <div class="col-visual" data-aos="fade-left">
+        <div class="globe3d-wrap">
+          <canvas id="earthCanvas"></canvas>
+          <div class="atmo-ring"></div>
+          <div class="globe3d-score-wrap">
+            <div class="globe3d-score-ring">
+              <svg viewBox="0 0 120 120" class="score-svg">
+                <circle cx="60" cy="60" r="52" class="score-track"/>
+                <circle cx="60" cy="60" r="52" class="score-fill" id="scoreFillCircle"/>
+              </svg>
+              <div class="score-inner">
+                <span class="score-num" id="globeScoreNum">72</span>
+                <span class="score-denom">/100</span>
+              </div>
+            </div>
+            <div class="globe3d-label">Earth Sustainability Score</div>
+          </div>
+          <div class="globe-info-card" id="globeInfoCard">
+            <div class="globe-info-icon" id="globeInfoIcon">🌍</div>
+            <div class="globe-info-text" id="globeInfoText">Hold &amp; drag to rotate</div>
+          </div>
+          <div class="globe-stat-pill pill-tl">🌡️ +1.2°C</div>
+          <div class="globe-stat-pill pill-tr">🌲 -10M ha/yr</div>
+          <div class="globe-stat-pill pill-bl">🌊 8M tons plastic</div>
+          <div class="globe-stat-pill pill-br">💨 90% polluted air</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reality-section" id="reality">
+
+  <!-- Background particle canvas -->
+  <canvas id="realityParticles"></canvas>
+
+  <div class="reality-inner">
+
+    <!-- Hook -->
+    <div class="reality-hook" data-aos="fade-up">
+      <span class="reality-label">BY THE NUMBERS</span>
+      <h2 class="reality-title">The Reality of Our Planet</h2>
+      <p class="reality-hook-line">
+        <span class="hook-accent">This is not just data.</span>
+        This is our reality and every second we wait, it gets worse.
+      </p>
+    </div>
+
+    <!-- Stats 3x2 grid -->
+    <div class="reality-grid">
+
+      <div class="reality-card crisis" data-aos="fade-up" data-aos-delay="0">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">🌊</div>
+        <div class="rc-number">
+          <span class="rc-countup" data-target="8" data-suffix="M">0</span>
+          <span class="rc-unit">tons/yr</span>
+        </div>
+        <div class="rc-title">Plastic in Oceans</div>
+        <div class="rc-desc">Every year, oceans swallow 8 million tons of plastic equivalent to dumping a garbage truck's load every single minute.</div>
+        <div class="rc-compare">≈ 1 garbage truck/minute</div>
+      </div>
+
+      <div class="reality-card crisis" data-aos="fade-up" data-aos-delay="80">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">🌡️</div>
+        <div class="rc-number">
+          <span class="rc-prefix">+</span><span class="rc-countup" data-target="1.2" data-suffix="°C" data-decimal="1">0</span>
+        </div>
+        <div class="rc-title">Global Warming</div>
+        <div class="rc-desc">Earth's average temperature has risen 1.2°C since 1880. Just 0.8°C more triggers irreversible climate tipping points.</div>
+        <div class="rc-compare">≈ 0.2°C rise per decade</div>
+      </div>
+
+      <div class="reality-card crisis" data-aos="fade-up" data-aos-delay="160">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">🌲</div>
+        <div class="rc-number">
+          <span class="rc-countup" data-target="10" data-suffix="M ha">0</span>
+        </div>
+        <div class="rc-title">Forest Lost Yearly</div>
+        <div class="rc-desc">We lose forests the size of South Korea every year stripping habitats, releasing carbon, and silencing biodiversity.</div>
+        <div class="rc-compare">≈ 27 football fields/minute</div>
+      </div>
+
+      <div class="reality-card warning" data-aos="fade-up" data-aos-delay="240">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">💨</div>
+        <div class="rc-number">
+          <span class="rc-countup" data-target="90" data-suffix="%">0</span>
+        </div>
+        <div class="rc-title">Breathe Polluted Air</div>
+        <div class="rc-desc">9 in 10 people on Earth inhale air that exceeds WHO safety limits an invisible crisis killing 7 million people annually.</div>
+        <div class="rc-compare">≈ 7M deaths per year</div>
+      </div>
+
+      <div class="reality-card warning" data-aos="fade-up" data-aos-delay="320">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">🦋</div>
+        <div class="rc-number">
+          <span class="rc-countup" data-target="1" data-suffix="M+">0</span>
+        </div>
+        <div class="rc-title">Species Threatened</div>
+        <div class="rc-desc">Over 1 million species face extinction the fastest mass extinction event since the dinosaurs, driven by human activity.</div>
+        <div class="rc-compare">≈ 150 species/day lost</div>
+      </div>
+
+      <div class="reality-card warning" data-aos="fade-up" data-aos-delay="400">
+        <div class="rc-glow"></div>
+        <div class="rc-icon">🧊</div>
+        <div class="rc-number">
+          <span class="rc-countup" data-target="40" data-suffix="%">0</span>
+        </div>
+        <div class="rc-title">Arctic Ice Lost</div>
+        <div class="rc-desc">Since 1979, Arctic summer sea ice has shrunk by 40% threatening polar ecosystems and accelerating sea level rise globally.</div>
+        <div class="rc-compare">≈ area of India melted</div>
+      </div>
+
+    </div>
+
+    <!-- Bottom urgency bar -->
+    <div class="reality-urgency" data-aos="fade-up">
+      <div class="urgency-line">
+        <span class="urgency-dot pulse-red"></span>
+        <span>While you read this page, <strong>4 hectares of forest</strong> were destroyed.</span>
+      </div>
+      <div class="urgency-line">
+        <span class="urgency-dot pulse-orange"></span>
+        <span>Every minute, <strong>1,000 tons of CO₂</strong> enter our atmosphere.</span>
+      </div>
+      <div class="urgency-line">
+        <span class="urgency-dot pulse-green"></span>
+        <span>But every minute, <strong>we can also choose differently.</strong></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     ENVIRONMENTAL IMPACT SIMULATION — unique prefix: eis_
+     ═══════════════════════════════════════════════════════ -->
+<section class="section" id="eis-simulator">
+  <div class="section-inner">
+
+    <div class="eis-header" data-aos="fade-up">
+      <span class="label">INTERACTIVE SIMULATOR</span>
+      <h2>Your Daily Impact on the Planet</h2>
+      <p class="section-sub">Select your daily habits below and instantly see your estimated environmental footprint like CO₂ emissions and plastic waste.</p>
+    </div>
+
+    <div class="eis-layout" data-aos="fade-up">
+
+      <!-- ── LEFT: Controls ── -->
+      <div class="eis-controls">
+
+        <!-- Plastic Usage -->
+        <div class="eis-control-group">
+          <label class="eis-label">
+            <span class="eis-label-icon">♻️</span> Plastic Usage
+          </label>
+          <div class="eis-pill-group" id="eis-plastic-pills">
+            <button class="eis-pill" data-value="3" onclick="eisPillSelect('eis-plastic-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🥤</span>
+              <span class="eis-pill-text">Frequent</span>
+              <span class="eis-pill-sub">Single-use daily</span>
+            </button>
+            <button class="eis-pill active" data-value="1.5" onclick="eisPillSelect('eis-plastic-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🛍️</span>
+              <span class="eis-pill-text">Occasional</span>
+              <span class="eis-pill-sub">Sometimes reusable</span>
+            </button>
+            <button class="eis-pill" data-value="0.2" onclick="eisPillSelect('eis-plastic-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🌿</span>
+              <span class="eis-pill-text">Never</span>
+              <span class="eis-pill-sub">Always reusable</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Transportation -->
+        <div class="eis-control-group">
+          <label class="eis-label">
+            <span class="eis-label-icon">🚗</span> Primary Transportation
+          </label>
+          <div class="eis-pill-group" id="eis-transport-pills">
+            <button class="eis-pill" data-value="60" onclick="eisPillSelect('eis-transport-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🏍️</span>
+              <span class="eis-pill-text">Motorcycle</span>
+              <span class="eis-pill-sub">60 kg CO₂/mo</span>
+            </button>
+            <button class="eis-pill" data-value="120" onclick="eisPillSelect('eis-transport-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🚗</span>
+              <span class="eis-pill-text">Car</span>
+              <span class="eis-pill-sub">120 kg CO₂/mo</span>
+            </button>
+            <button class="eis-pill active" data-value="30" onclick="eisPillSelect('eis-transport-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🚌</span>
+              <span class="eis-pill-text">Public</span>
+              <span class="eis-pill-sub">30 kg CO₂/mo</span>
+            </button>
+            <button class="eis-pill" data-value="0" onclick="eisPillSelect('eis-transport-pills',this);eisCalc()">
+              <span class="eis-pill-icon">🚲</span>
+              <span class="eis-pill-text">Bicycle</span>
+              <span class="eis-pill-sub">Zero emissions</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- kWh Slider only (electricity level dropdown removed) -->
+        <div class="eis-control-group">
+          <label class="eis-label" for="eis-kwh">
+            <span class="eis-label-icon">🔌</span> Daily Electricity Consumption
+            <span class="eis-kwh-val"><span id="eis-kwh-display">10</span> kWh/day</span>
+          </label>
+          <input type="range" id="eis-kwh" min="1" max="40" value="10" class="eis-slider" oninput="eisSyncSlider();eisCalc()">
+          <div class="eis-slider-labels"><span>1 kWh</span><span>40 kWh</span></div>
+        </div>
+
+        <button class="eis-reset-btn" onclick="eisReset()">↺ Reset to Defaults</button>
+      </div>
+
+      <!-- ── RIGHT: Results ── -->
+      <div class="eis-results">
+
+        <!-- Impact indicator -->
+        <div class="eis-indicator-wrap">
+          <div class="eis-icon-big" id="eis-icon">🌱</div>
+          <div class="eis-circular-wrap">
+            <svg class="eis-circle-svg" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="eis-circle-track"/>
+              <circle cx="60" cy="60" r="50" class="eis-circle-fill" id="eis-circle-fill"/>
+            </svg>
+            <div class="eis-circle-inner">
+              <div class="eis-circle-pct" id="eis-circle-pct">28%</div>
+              <div class="eis-circle-lbl">Impact</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="eis-level-text" id="eis-level-text">
+          Your environmental impact is <strong>LOW</strong> (good for the environment)
+        </div>
+
+        <div class="eis-progress-bar-wrap">
+          <div class="eis-progress-bar" id="eis-progress-bar" style="width:28%"></div>
+        </div>
+
+        <!-- Metric cards -->
+        <div class="eis-metrics">
+          <div class="eis-metric-card">
+            <div class="eis-metric-icon">💨</div>
+            <div class="eis-metric-body">
+              <div class="eis-metric-label">CO₂ Emissions</div>
+              <div class="eis-metric-value"><span id="eis-co2">55.5</span> <small>kg / month</small></div>
+            </div>
+          </div>
+          <div class="eis-metric-card">
+            <div class="eis-metric-icon">🗑️</div>
+            <div class="eis-metric-body">
+              <div class="eis-metric-label">Plastic Waste</div>
+              <div class="eis-metric-value"><span id="eis-plastic-out">1.5</span> <small>kg / month</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="eis-recs" id="eis-recs">
+          <div class="eis-recs-title">💡 Personalized Recommendations</div>
+          <ul id="eis-recs-list"></ul>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* ═══════════════════════════════════════
+   EIS — Environmental Impact Simulator
+   All classes prefixed with eis- / #eis-
+   ═══════════════════════════════════════ */
+#eis-simulator { background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 100%); }
+#eis-simulator .section-sub { color: #8eb3d8; max-width: 620px; margin: 0 auto 0; }
+
+.eis-header { text-align: center; margin-bottom: 2.5rem; }
+
+/* Layout */
+.eis-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .eis-layout { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Controls */
+.eis-controls {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.eis-control-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.eis-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #8eb3d8;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.eis-label-icon { font-size: 1rem; }
+.eis-kwh-val {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #00e676;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Pill selector groups */
+.eis-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.eis-pill {
+  flex: 1 1 0;
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 0.7rem 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  color: #8eb3d8;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.eis-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,230,118,0.12), rgba(21,101,192,0.08));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.eis-pill:hover {
+  border-color: rgba(0,230,118,0.4);
+  color: #c8e6ff;
+  transform: translateY(-2px);
+}
+.eis-pill:hover::before { opacity: 1; }
+.eis-pill.active {
+  background: rgba(0,230,118,0.1);
+  border-color: #00e676;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(0,230,118,0.2), inset 0 0 12px rgba(0,230,118,0.05);
+}
+.eis-pill.active::before { opacity: 1; }
+.eis-pill-icon { font-size: 1.3rem; line-height: 1; }
+.eis-pill-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.eis-pill-sub {
+  font-size: 0.65rem;
+  color: #4a6a8a;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.eis-pill.active .eis-pill-sub { color: rgba(0,230,118,0.7); }
+.eis-pill:hover .eis-pill-sub { color: #6a8aaa; }
+
+/* Slider */
+.eis-slider {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #00e676, #1565c0);
+  cursor: pointer;
+  outline: none;
+}
+.eis-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #00e676;
+  border: 3px solid #0a1628;
+  box-shadow: 0 0 8px rgba(0,230,118,0.5);
+  cursor: grab;
+}
+.eis-slider::-moz-range-thumb {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #00e676;
+  border: 3px solid #0a1628;
+  cursor: grab;
+}
+.eis-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.73rem;
+  color: #4a6a8a;
+  margin-top: 2px;
+}
+
+/* Reset button */
+.eis-reset-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: #8eb3d8;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.3rem;
+}
+.eis-reset-btn:hover { border-color: #00e676; color: #00e676; }
+
+/* Results panel */
+.eis-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* Circular indicator */
+.eis-indicator-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.eis-icon-big {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 12px rgba(0,230,118,0.5));
+  transition: all 0.4s ease;
+  flex-shrink: 0;
+}
+.eis-circular-wrap {
+  position: relative;
+  width: 120px; height: 120px;
+  flex-shrink: 0;
+}
+.eis-circle-svg {
+  transform: rotate(-90deg);
+  width: 100%; height: 100%;
+}
+.eis-circle-track {
+  fill: none;
+  stroke: rgba(255,255,255,0.07);
+  stroke-width: 8;
+}
+.eis-circle-fill {
+  fill: none;
+  stroke: #00e676;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 0.6s cubic-bezier(.4,0,.2,1), stroke 0.4s;
+}
+.eis-circle-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.eis-circle-pct {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  transition: color 0.4s;
+}
+.eis-circle-lbl { font-size: 0.65rem; color: #8eb3d8; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* Level text */
+.eis-level-text {
+  font-size: 0.95rem;
+  color: #8eb3d8;
+  background: rgba(0,230,118,0.07);
+  border-left: 3px solid #00e676;
+  border-radius: 0 8px 8px 0;
+  padding: 0.8rem 1rem;
+  transition: all 0.4s;
+  line-height: 1.5;
+}
+.eis-level-text strong { color: #00e676; }
+.eis-level-text.moderate { background: rgba(255,193,7,0.07); border-color: #ffc107; }
+.eis-level-text.moderate strong { color: #ffc107; }
+.eis-level-text.high { background: rgba(229,57,53,0.07); border-color: #e53935; }
+.eis-level-text.high strong { color: #e53935; }
+
+/* Progress bar */
+.eis-progress-bar-wrap {
+  height: 8px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.eis-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #1565c0, #00e676);
+  border-radius: 4px;
+  transition: width 0.6s cubic-bezier(.4,0,.2,1), background 0.4s;
+}
+
+/* Metric cards */
+.eis-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.eis-metric-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.eis-metric-icon { font-size: 1.6rem; }
+.eis-metric-label { font-size: 0.72rem; color: #8eb3d8; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
+.eis-metric-value { font-size: 1.1rem; font-weight: 700; color: #fff; }
+.eis-metric-value small { font-size: 0.72rem; color: #8eb3d8; font-weight: 400; }
+
+/* Recommendations */
+.eis-recs {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+}
+.eis-recs-title { font-size: 0.85rem; font-weight: 700; color: #e8f4ff; margin-bottom: 0.8rem; letter-spacing: 0.02em; }
+#eis-recs-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.55rem; }
+#eis-recs-list li {
+  font-size: 0.88rem;
+  color: #8eb3d8;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+#eis-recs-list li::before { content: '→'; color: #00e676; flex-shrink: 0; margin-top: 1px; }
+</style>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   EIS — Environmental Impact Simulation Logic
+   ═══════════════════════════════════════════════════ */
+(function() {
+
+  // ── Animated number counter ──
+  function animNum(el, target, decimals) {
+    const start = parseFloat(el.textContent) || 0;
+    const diff  = target - start;
+    const steps = 30;
+    let s = 0;
+    clearInterval(el._eis_timer);
+    el._eis_timer = setInterval(() => {
+      s++;
+      const val = start + diff * (s / steps);
+      el.textContent = val.toFixed(decimals);
+      if (s >= steps) clearInterval(el._eis_timer);
+    }, 16);
+  }
+
+  // ── Pill selector helper ──
+  window.eisPillSelect = function(groupId, btn) {
+    document.querySelectorAll('#' + groupId + ' .eis-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  };
+
+  // ── Sync slider display ──
+  window.eisSyncSlider = function() {
+    const v = document.getElementById('eis-kwh').value;
+    document.getElementById('eis-kwh-display').textContent = v;
+  };
+
+  // ── Helper: get active pill value ──
+  function getPillVal(groupId) {
+    const active = document.querySelector('#' + groupId + ' .eis-pill.active');
+    return active ? parseFloat(active.dataset.value) : 0;
+  }
+
+  // ── Main calculation ──
+  window.eisCalc = function() {
+    const plastic   = getPillVal('eis-plastic-pills');
+    const transport = getPillVal('eis-transport-pills');
+    const kwh       = parseFloat(document.getElementById('eis-kwh').value);
+
+    // CO₂: transport + electricity (kWh × 0.85 × 30 days)
+    const co2 = transport + (kwh * 0.85 * 30);
+    const plasticOut = plastic;
+
+    // Percent of max (transport max=120, elec max=40×0.85×30=1020, so max≈1140)
+    const maxCo2 = 120 + (40 * 0.85 * 30); // 1140
+    const pct = Math.min(100, Math.round((co2 / maxCo2) * 100));
+
+    // Update numbers with animation
+    animNum(document.getElementById('eis-co2'),         co2,        1);
+    animNum(document.getElementById('eis-plastic-out'), plasticOut, 1);
+
+    // Circle
+    const circle = document.getElementById('eis-circle-fill');
+    const circumference = 314;
+    circle.style.strokeDashoffset = circumference * (1 - pct / 100);
+
+    // Animated percent text
+    animNum(document.getElementById('eis-circle-pct'), pct, 0);
+    document.getElementById('eis-circle-pct').textContent = pct + '%';
+    // Re-attach so animNum works cleanly:
+    const pctEl = document.getElementById('eis-circle-pct');
+    clearInterval(pctEl._eis_timer);
+    const startPct = parseInt(pctEl.textContent) || 0;
+    const diffPct  = pct - startPct;
+    let sp = 0;
+    pctEl._eis_timer = setInterval(() => {
+      sp++;
+      pctEl.textContent = Math.round(startPct + diffPct * (sp / 30)) + '%';
+      if (sp >= 30) { pctEl.textContent = pct + '%'; clearInterval(pctEl._eis_timer); }
+    }, 16);
+
+    // Progress bar
+    document.getElementById('eis-progress-bar').style.width = pct + '%';
+
+    // Colors & icon & text
+    const icon     = document.getElementById('eis-icon');
+    const levelEl  = document.getElementById('eis-level-text');
+    const bar      = document.getElementById('eis-progress-bar');
+
+    if (pct <= 30) {
+      circle.style.stroke = '#00e676';
+      bar.style.background = 'linear-gradient(90deg,#1565c0,#00e676)';
+      icon.textContent = '🌱';
+      icon.style.filter = 'drop-shadow(0 0 12px rgba(0,230,118,0.6))';
+      levelEl.className = 'eis-level-text';
+      levelEl.innerHTML = 'Your environmental impact is <strong>LOW</strong> (good for the environment)';
+    } else if (pct <= 60) {
+      circle.style.stroke = '#ffc107';
+      bar.style.background = 'linear-gradient(90deg,#f57f17,#ffc107)';
+      icon.textContent = '⚠️';
+      icon.style.filter = 'drop-shadow(0 0 12px rgba(255,193,7,0.5))';
+      levelEl.className = 'eis-level-text moderate';
+      levelEl.innerHTML = 'Your environmental impact is <strong>MODERATE</strong> (can be improved)';
+    } else {
+      circle.style.stroke = '#e53935';
+      bar.style.background = 'linear-gradient(90deg,#7f1d1d,#e53935)';
+      icon.textContent = '🔥';
+      icon.style.filter = 'drop-shadow(0 0 12px rgba(229,57,53,0.6))';
+      levelEl.className = 'eis-level-text high';
+      levelEl.innerHTML = 'Your environmental impact is <strong>HIGH</strong> (harmful to the environment)';
+    }
+
+    // Recommendations
+    const recs = [];
+    if (plastic >= 3)   recs.push('Reduce plastic usage — switch to reusable bags, bottles, and containers.');
+    if (plastic >= 1.5 && plastic < 3) recs.push('Try to minimize occasional plastic use, like bringing a reusable bag when shopping.');
+    if (transport === 120) recs.push('Switch to public transport or carpooling to cut transport emissions by up to 75%.');
+    if (transport === 60)  recs.push('Consider switching from motorcycle to public transport or bicycle for shorter trips.');
+    if (transport === 0)   recs.push('Great choice cycling! Keep it up — it\'s zero-emission and great for your health.');
+    if (kwh >= 25) recs.push('Lower electricity consumption — turn off appliances on standby and use LED lighting.');
+    if (kwh >= 15 && kwh < 25) recs.push('You can still reduce electricity usage — unplug chargers and use energy-efficient appliances.');
+    if (recs.length === 0) recs.push('Excellent habits! Share your sustainable lifestyle with friends and family. 🌍');
+
+    const list = document.getElementById('eis-recs-list');
+    list.innerHTML = recs.map(r => `<li>${r}</li>`).join('');
+  };
+
+  // ── Reset ──
+  window.eisReset = function() {
+    // Plastic: default = 1.5 (Occasional)
+    eisPillSelect('eis-plastic-pills', document.querySelector('#eis-plastic-pills .eis-pill[data-value="1.5"]'));
+    // Transport: default = 30 (Public)
+    eisPillSelect('eis-transport-pills', document.querySelector('#eis-transport-pills .eis-pill[data-value="30"]'));
+    document.getElementById('eis-kwh').value = '10';
+    eisSyncSlider();
+    eisCalc();
+  };
+
+  // Init
+  eisCalc();
+})();
+</script>
+
+
+
+
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo"><img src="earth.png" alt="Earth" class="nav-earth-icon"> Future Earth</span>
+      <p>An environmental awareness project dedicated to educating people about climate change and inspiring action for a sustainable future.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="content.html">Content</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="https://instagram.com/steven_alberth313" target="_blank">@steven_alberth313</a></li>
+        <li><a href="https://instagram.com/adhitomov" target="_blank">@adhitomov</a></li>
+        <li><a href="https://instagram.com/raphadriann" target="_blank">@raphadriann</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Future Earth Interactive Project. Built with love for our planet.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+
+
+
+  // ── REALITY SECTION: Count-up animation ──
+  function animateCountUp(el) {
+    const target  = parseFloat(el.dataset.target);
+    const suffix  = el.dataset.suffix  || '';
+    const decimal = parseInt(el.dataset.decimal) || 0;
+    const duration = 1800;
+    const step = 16;
+    const steps = duration / step;
+    let current = 0;
+    const increment = target / steps;
+    const timer = setInterval(() => {
+      current = Math.min(current + increment, target);
+      el.textContent = decimal > 0
+        ? current.toFixed(decimal) + suffix
+        : Math.floor(current) + suffix;
+      if (current >= target) clearInterval(timer);
+    }, step);
+  }
+
+  // Trigger when card enters viewport
+  const realityObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.rc-countup').forEach(el => {
+          if (!el.dataset.done) { el.dataset.done = 1; animateCountUp(el); }
+        });
+        entry.target.classList.add('rc-visible');
+      }
+    });
+  }, { threshold: 0.25 });
+
+  document.querySelectorAll('.reality-card').forEach(c => realityObserver.observe(c));
+
+  // Also trigger urgency bar
+  const urgencyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('urgency-visible'); });
+  }, { threshold: 0.5 });
+  const urgEl = document.querySelector('.reality-urgency');
+  if (urgEl) urgencyObserver.observe(urgEl);
+
+  // ── REALITY SECTION: Particle background ──
+  (function initParticles() {
+    const canvas = document.getElementById('realityParticles');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, particles = [];
+
+    function resize() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      W = canvas.width  = rect.width  || window.innerWidth;
+      H = canvas.height = rect.height || 600;
+    }
+    resize();
+    window.addEventListener('resize', () => { resize(); });
+
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * 2000,
+        y: Math.random() * 800,
+        r: Math.random() * 1.5 + 0.4,
+        vx: (Math.random() - 0.5) * 0.15,
+        vy: (Math.random() - 0.5) * 0.15,
+        a: Math.random() * 0.5 + 0.2,
+        color: Math.random() > 0.5 ? '229,57,53' : '255,152,0'
+      });
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, W, H);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x % W, p.y % H, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color},${p.a})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+  function toggleMenu() { document.getElementById('navMenu').classList.toggle('open'); }
+
+  // ── 3D EARTH GLOBE ──────────────────────────────────────────────
+  (function initGlobe() {
+    const canvas = document.getElementById('earthCanvas');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    const wrap = canvas.parentElement;
+    const W = 340, H = 340;
+    canvas.width  = W;
+    canvas.height = H;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H);
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 2.5;
+
+    // Lights
+    const ambient = new THREE.AmbientLight(0x334466, 1.2);
+    scene.add(ambient);
+    const sun = new THREE.DirectionalLight(0xffffff, 2.2);
+    sun.position.set(3, 1, 2);
+    scene.add(sun);
+    const rimLight = new THREE.DirectionalLight(0x00e676, 0.4);
+    rimLight.position.set(-3, -1, -1);
+    scene.add(rimLight);
+
+    // Earth sphere
+    const geo = new THREE.SphereGeometry(1, 64, 64);
+    const loader = new THREE.TextureLoader();
+
+    const earthTex = loader.load(
+      'https://unpkg.com/three-globe@2.30.0/example/img/earth-blue-marble.jpg',
+      undefined, undefined,
+      () => {
+        earth.material = new THREE.MeshPhongMaterial({
+          color: 0x1565c0, emissive: 0x0a1f3d, shininess: 30
+        });
+      }
+    );
+    const bumpTex = loader.load('https://unpkg.com/three-globe@2.30.0/example/img/earth-topology.png');
+    const specTex = loader.load('https://unpkg.com/three-globe@2.30.0/example/img/earth-water.png');
+
+    const mat = new THREE.MeshPhongMaterial({
+      map: earthTex, bumpMap: bumpTex, bumpScale: 0.05,
+      specularMap: specTex, specular: new THREE.Color(0x224488), shininess: 25,
+    });
+    const earth = new THREE.Mesh(geo, mat);
+    scene.add(earth);
+
+    const atmosGeo = new THREE.SphereGeometry(1.06, 64, 64);
+    const atmosMat = new THREE.MeshPhongMaterial({
+      color: 0x00bcd4, transparent: true, opacity: 0.08, side: THREE.FrontSide,
+    });
+    const atmos = new THREE.Mesh(atmosGeo, atmosMat);
+    scene.add(atmos);
+
+    const haloGeo = new THREE.SphereGeometry(1.14, 64, 64);
+    scene.add(new THREE.Mesh(haloGeo, new THREE.MeshPhongMaterial({
+      color: 0x1565c0, transparent: true, opacity: 0.04, side: THREE.BackSide,
+    })));
+
+    // Stars
+    const starGeo = new THREE.BufferGeometry();
+    const starPos = new Float32Array(800 * 3);
+    for (let i = 0; i < starPos.length; i++) starPos[i] = (Math.random() - 0.5) * 60;
+    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+    scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({
+      color: 0xffffff, size: 0.06, transparent: true, opacity: 0.7
+    })));
+
+    // ── Rotation state ──
+    let rotX = 0;          // current X tilt
+    let rotY = 0;          // current Y spin
+    let velX = 0;          // drag velocity X
+    let velY = 0.0015;     // auto-spin velocity Y
+    let isDragging = false;
+    let lastMouseX = 0, lastMouseY = 0;
+    let isHovered = false;
+
+    const hoverZones = [
+      { minLon:-180, maxLon:-60, emoji:'🌿', text:'Amazon deforestation: 17% lost in 50 years' },
+      { minLon:-60,  maxLon: 30, emoji:'🌊', text:'Atlantic: rising 3.3mm/year sea levels'    },
+      { minLon: 30,  maxLon:120, emoji:'🔥', text:'Asia: 50% of global CO₂ emissions'          },
+      { minLon:120,  maxLon:180, emoji:'🧊', text:'Pacific: coral bleaching at record levels'  },
+    ];
+
+    function updateInfoCard(clientX) {
+      const rect  = canvas.getBoundingClientRect();
+      const normX = ((clientX - rect.left) / W - 0.5) * 2;
+      const lon   = normX * 180 + ((rotY * 180 / Math.PI) % 360);
+      const norm  = ((lon % 360) + 360) % 360 - 180;
+      const zone  = hoverZones.find(z => norm >= z.minLon && norm < z.maxLon) || hoverZones[0];
+      document.getElementById('globeInfoIcon').textContent = zone.emoji;
+      document.getElementById('globeInfoText').textContent = zone.text;
+    }
+
+    // ── Mouse events: only drag on left-button, never block scroll ──
+    canvas.addEventListener('mouseenter', () => {
+      isHovered = true;
+      wrap.classList.add('hovered');
+    });
+
+    canvas.addEventListener('mouseleave', () => {
+      isHovered = false;
+      isDragging = false;
+      wrap.classList.remove('hovered');
+      document.getElementById('globeInfoText').textContent = 'Hold & drag to rotate';
+      document.getElementById('globeInfoIcon').textContent = '🌍';
+    });
+
+    canvas.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;   // left button only
+      isDragging   = true;
+      lastMouseX   = e.clientX;
+      lastMouseY   = e.clientY;
+      velX = 0; velY = 0;           // stop momentum while dragging
+      canvas.style.cursor = 'grabbing';
+    });
+
+    // mousemove and mouseup on window so drag works outside canvas
+    window.addEventListener('mousemove', (e) => {
+      if (!isHovered) return;
+      if (!isDragging) {
+        updateInfoCard(e.clientX);
+        return;
+      }
+      const dx = e.clientX - lastMouseX;
+      const dy = e.clientY - lastMouseY;
+      rotY += dx * 0.007;
+      rotX += dy * 0.007;
+      rotX  = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotX));
+      velY  = dx * 0.007;           // carry momentum
+      velX  = dy * 0.007;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+    });
+
+    window.addEventListener('mouseup', (e) => {
+      if (e.button !== 0) return;
+      isDragging = false;
+      canvas.style.cursor = 'grab';
+      // velX/velY carry inertia from last drag delta
+    });
+
+    // ── Score updater (called from simulator) ──
+    window.updateGlobeScore = function(val) {
+      const el     = document.getElementById('globeScoreNum');
+      const circle = document.getElementById('scoreFillCircle');
+      if (!el || !circle) return;
+      const start = parseInt(el.textContent);
+      const diff  = val - start;
+      const steps = 20;
+      let step = 0;
+      const timer = setInterval(() => {
+        step++;
+        const cur = Math.round(start + diff * (step / steps));
+        el.textContent = cur;
+        const circumference = 2 * Math.PI * 52;
+        circle.style.strokeDashoffset = circumference * (1 - cur / 100);
+        if (cur >= 60)      { circle.style.stroke = '#00e676'; atmosMat.color.set(0x00e676); }
+        else if (cur <= 40) { circle.style.stroke = '#e53935'; atmosMat.color.set(0xe53935); }
+        else                { circle.style.stroke = '#42a5f5'; atmosMat.color.set(0x42a5f5); }
+        if (step >= steps) clearInterval(timer);
+      }, 20);
+    };
+
+    // Init SVG ring at 72%
+    const circumference = 2 * Math.PI * 52;
+    const fillEl = document.getElementById('scoreFillCircle');
+    if (fillEl) {
+      fillEl.style.strokeDasharray  = circumference;
+      fillEl.style.strokeDashoffset = circumference * (1 - 0.72);
+    }
+
+    // ── Animation loop ──
+    function animate() {
+      requestAnimationFrame(animate);
+
+      if (!isDragging) {
+        // Inertia: decay toward auto-spin
+        velY += (0.0015 - velY) * 0.03;
+        velX += (0      - velX) * 0.05;
+        rotY += velY;
+        rotX += velX;
+        rotX  = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotX));
+      }
+
+      earth.rotation.y = rotY;
+      earth.rotation.x = rotX;
+      atmos.rotation.copy(earth.rotation);
+
+      renderer.render(scene, camera);
+    }
+    animate();
+  })();
+
+  // ── 3D SIMULATOR EARTH (choices section) ────────────────────────
+  (function initSimGlobe() {
+    const canvas = document.getElementById('simEarthCanvas');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    const wrap = canvas.parentElement;
+    const W = 280, H = 280;
+    canvas.width  = W;
+    canvas.height = H;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H);
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 2.5;
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0x334466, 1.2));
+    const sun = new THREE.DirectionalLight(0xffffff, 2.2);
+    sun.position.set(3, 1, 2);
+    scene.add(sun);
+    const rimLight = new THREE.DirectionalLight(0x00e676, 0.4);
+    rimLight.position.set(-3, -1, -1);
+    scene.add(rimLight);
+
+    // Earth
+    const loader  = new THREE.TextureLoader();
+    const earthTex = loader.load('https://unpkg.com/three-globe@2.30.0/example/img/earth-blue-marble.jpg',
+      undefined, undefined, () => { earth.material = new THREE.MeshPhongMaterial({ color:0x1565c0, emissive:0x0a1f3d, shininess:30 }); });
+    const bumpTex  = loader.load('https://unpkg.com/three-globe@2.30.0/example/img/earth-topology.png');
+    const specTex  = loader.load('https://unpkg.com/three-globe@2.30.0/example/img/earth-water.png');
+
+    const mat = new THREE.MeshPhongMaterial({
+      map: earthTex, bumpMap: bumpTex, bumpScale: 0.05,
+      specularMap: specTex, specular: new THREE.Color(0x224488), shininess: 25,
+    });
+    const earth = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), mat);
+    scene.add(earth);
+
+    // Atmosphere starts green (good)
+    const atmosMat = new THREE.MeshPhongMaterial({
+      color: 0x00e676, transparent: true, opacity: 0.10, side: THREE.FrontSide,
+    });
+    const atmos = new THREE.Mesh(new THREE.SphereGeometry(1.06, 64, 64), atmosMat);
+    scene.add(atmos);
+
+    // Halo
+    scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.14, 64, 64),
+      new THREE.MeshPhongMaterial({ color:0x1565c0, transparent:true, opacity:0.04, side:THREE.BackSide })));
+
+    // Stars
+    const starPos = new Float32Array(600 * 3);
+    for (let i = 0; i < starPos.length; i++) starPos[i] = (Math.random() - 0.5) * 60;
+    const starGeo = new THREE.BufferGeometry();
+    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+    scene.add(new THREE.Points(starGeo,
+      new THREE.PointsMaterial({ color:0xffffff, size:0.07, transparent:true, opacity:0.6 })));
+
+    // Drag state
+    let rotX = 0, rotY = 0;
+    let velX = 0, velY = 0.0018;
+    let isDragging = false;
+    let lastX = 0, lastY = 0;
+    let isOver = false;
+
+    canvas.addEventListener('mouseenter', () => { isOver = true; });
+    canvas.addEventListener('mouseleave', () => { isOver = false; isDragging = false; canvas.style.cursor='grab'; });
+    canvas.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      isDragging = true; lastX = e.clientX; lastY = e.clientY;
+      velX = 0; velY = 0; canvas.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging || !isOver) return;
+      const dx = e.clientX - lastX, dy = e.clientY - lastY;
+      rotY += dx * 0.007; rotX += dy * 0.007;
+      rotX  = Math.max(-Math.PI/2, Math.min(Math.PI/2, rotX));
+      velY  = dx * 0.007; velX = dy * 0.007;
+      lastX = e.clientX;  lastY = e.clientY;
+    });
+    window.addEventListener('mouseup', (e) => {
+      if (e.button !== 0) return;
+      isDragging = false; canvas.style.cursor = 'grab';
+    });
+
+    // ── Expose: called from script.js when score changes ──
+    window.updateSimGlobe = function(score) {
+      if (score >= 60) {
+        atmosMat.color.set(0x00e676);
+        atmosMat.opacity = 0.12;
+        canvas.style.filter = 'drop-shadow(0 0 40px rgba(0,230,118,0.55)) drop-shadow(0 0 80px rgba(21,101,192,0.2))';
+      } else if (score <= 40) {
+        atmosMat.color.set(0xe53935);
+        atmosMat.opacity = 0.14;
+        canvas.style.filter = 'drop-shadow(0 0 40px rgba(229,57,53,0.55)) drop-shadow(0 0 80px rgba(183,28,28,0.25))';
+      } else {
+        atmosMat.color.set(0x42a5f5);
+        atmosMat.opacity = 0.10;
+        canvas.style.filter = 'drop-shadow(0 0 36px rgba(66,165,245,0.4)) drop-shadow(0 0 70px rgba(21,101,192,0.2))';
+      }
+      // Trigger pulse ring animation
+      const ring = document.getElementById('simPulseRing');
+      if (ring) {
+        ring.classList.remove('pulse-anim');
+        void ring.offsetWidth; // reflow
+        ring.classList.add('pulse-anim');
+      }
+    };
+
+    // Animation loop
+    (function animate() {
+      requestAnimationFrame(animate);
+      if (!isDragging) {
+        velY += (0.0018 - velY) * 0.03;
+        velX += (0 - velX) * 0.05;
+        rotY += velY; rotX += velX;
+        rotX = Math.max(-Math.PI/2, Math.min(Math.PI/2, rotX));
+      }
+      earth.rotation.y = rotY;
+      earth.rotation.x = rotX;
+      atmos.rotation.copy(earth.rotation);
+      renderer.render(scene, camera);
+    })();
+  })();
+</script>
+</body>
+</html>

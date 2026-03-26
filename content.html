@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Earth – Content</title>
+  <link rel="icon" type="image/png" href="earth.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">🌍 Future Earth</a>
+    <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="content.html" class="active">Content</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-hero"
+    style="background-image:url('https://cdn.pixabay.com/photo/2018/10/28/16/11/volcano-3779159_1280.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content" data-aos="fade-up">
+      <span class="hero-tag">LEARN & ACT</span>
+      <h1>Environmental Content</h1>
+      <p>In-depth information on climate change, ecosystems, pollution, and the solutions shaping our future.</p>
+    </div>
+  </header>
+
+  <!-- TABS NAV -->
+  <div class="tabs-bar">
+    <button class="tab-btn active" onclick="showTab('threats')">🌡️ Threats</button>
+    <button class="tab-btn" onclick="showTab('ecosystems')">🌿 Ecosystems</button>
+    <button class="tab-btn" onclick="showTab('solutions')">☀️ Solutions</button>
+    <button class="tab-btn" onclick="showTab('action')">✊ Act Simulation</button>
+  </div>
+
+  <!-- TAB: THREATS — Cinematic Storytelling -->
+  <div id="tab-threats" class="tab-content active">
+
+    <!-- Stat ribbon -->
+    <div class="cn-ribbon">
+      <div class="cn-rstat"><span class="cn-rnum" data-target="1.2" data-suffix="°C" data-decimal="1" data-prefix="+">+0°C</span><span class="cn-rdesc">Global warming since 1880</span></div>
+      <div class="cn-rsep"></div>
+      <div class="cn-rstat"><span class="cn-rnum" data-target="2023" data-suffix="" data-isint="1">0</span><span class="cn-rdesc">Hottest year ever recorded</span></div>
+      <div class="cn-rsep"></div>
+      <div class="cn-rstat"><span class="cn-rnum" data-target="420" data-suffix=" ppm">0 ppm</span><span class="cn-rdesc">CO₂ in atmosphere</span></div>
+      <div class="cn-rsep"></div>
+      <div class="cn-rstat"><span class="cn-rnum" data-target="8" data-suffix="M t">0M t</span><span class="cn-rdesc">Plastic enters oceans yearly</span></div>
+    </div>
+
+    <!-- Spotlight carousel -->
+    <div class="cn-stage" id="cnThreatStage">
+
+      <button class="cn-arrow cn-arrow-l" id="cnThreatPrev" aria-label="Previous">&#8249;</button>
+      <button class="cn-arrow cn-arrow-r" id="cnThreatNext" aria-label="Next">&#8250;</button>
+
+      <div class="cn-track" id="cnThreatTrack">
+
+        <!-- CARD 1 -->
+        <div class="cn-card cn-active" data-index="0">
+          <div class="cn-bg" style="background-image:url('https://media.gettyimages.com/id/1628192448/photo/svalbard-and-jan-mayen-a-view-of-the-partially-melting-glaciers-as-a-polar-bears-one-of-the.jpg?s=612x612&w=0&k=20&c=ZxSiqqUIY1ULpa59T9vfH4hRckEahjGfLr-IkRJIAec=')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">CLIMATE CHANGE</span>
+            <h3 class="cn-title">Global Warming &amp;<br>Rising Temperatures</h3>
+            <p class="cn-hook">Earth is heating faster than any time in 2,000 years.</p>
+            <ul class="cn-pts">
+              <li>Fossil fuels raised temps 1.2°C since industrialization</li>
+              <li>3–4°C more by 2100 without aggressive action</li>
+              <li>Heat waves, droughts &amp; storms intensifying globally</li>
+            </ul>
+            <div class="cn-chips">
+              <span class="cn-chip red">+1.2°C since 1880</span>
+              <span class="cn-chip orange">2023 hottest year</span>
+              <span class="cn-chip blue">420 ppm CO₂</span>
+            </div>
+          </div>
+          <div class="cn-num-badge">01</div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="cn-card" data-index="1">
+          <div class="cn-bg" style="background-image:url('https://cdn.pixabay.com/photo/2026/03/23/16/47/pixelwanderer-sea-turtle-10188870_1280.jpg')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">OCEAN POLLUTION</span>
+            <h3 class="cn-title">Plastic Crisis<br>in Our Oceans</h3>
+            <p class="cn-hook">Our oceans are drowning in plastic we created.</p>
+            <ul class="cn-pts">
+              <li>8 million tons dumped into oceans every year</li>
+              <li>Microplastics found in human blood &amp; unborn fetuses</li>
+              <li>700+ marine species directly threatened with extinction</li>
+            </ul>
+            <div class="cn-chips">
+              <span class="cn-chip red">8M tons/year</span>
+              <span class="cn-chip blue">700+ species at risk</span>
+            </div>
+          </div>
+          <div class="cn-num-badge">02</div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="cn-card" data-index="2">
+          <div class="cn-bg" style="background-image:url('https://cdn.pixabay.com/photo/2022/05/15/17/25/forest-7198607_1280.jpg')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">DEFORESTATION</span>
+            <h3 class="cn-title">Disappearing<br>Forests</h3>
+            <p class="cn-hook">We lose a forest the size of South Korea every single year.</p>
+            <ul class="cn-pts">
+              <li>10 million hectares destroyed annually worldwide</li>
+              <li>80% of Earth's land species call forests home</li>
+              <li>Amazon has already lost 17% of its original area</li>
+            </ul>
+            <div class="cn-chips">
+              <span class="cn-chip orange">10M ha/year</span>
+              <span class="cn-chip blue">17% Amazon lost</span>
+            </div>
+          </div>
+          <div class="cn-num-badge">03</div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="cn-card" data-index="3">
+          <div class="cn-bg" style="background-image:url('https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/99f1/live/f61767b0-f8db-11ef-8c03-7dfdbeeb2526.jpg.webp')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">SEA LEVEL RISE</span>
+            <h3 class="cn-title">Coastal Cities<br>Under Threat</h3>
+            <p class="cn-hook">1 billion people live in areas that may be submerged.</p>
+            <ul class="cn-pts">
+              <li>Sea levels rose +20 cm since the late 19th century</li>
+              <li>Up to 1 meter more by 2100 on current trajectory</li>
+              <li>Jakarta, Miami, Mumbai face catastrophic flood risk</li>
+            </ul>
+            <div class="cn-chips">
+              <span class="cn-chip red">+20cm since 1900</span>
+              <span class="cn-chip blue">1B people at risk</span>
+            </div>
+          </div>
+          <div class="cn-num-badge">04</div>
+        </div>
+
+      </div><!-- /track -->
+
+      <!-- Dot navigation -->
+      <div class="cn-dots" id="cnThreatDots"></div>
+
+    </div><!-- /stage -->
+  </div>
+
+  <!-- TAB: ECOSYSTEMS — Spotlight Carousel -->
+  <div id="tab-ecosystems" class="tab-content">
+
+    <div class="cn-stage" id="cnEcoStage">
+
+      <button class="cn-arrow cn-arrow-l" id="cnEcoPrev" aria-label="Previous">&#8249;</button>
+      <button class="cn-arrow cn-arrow-r" id="cnEcoNext" aria-label="Next">&#8250;</button>
+
+      <div class="cn-track" id="cnEcoTrack">
+
+        <div class="cn-card cn-active" data-index="0">
+          <div class="cn-bg" style="background-image:url('https://grist.org/wp-content/uploads/2024/04/GettyImages_CORAL_BLEACHING_2024.jpg?resize=1200%2C675&quality=75&strip=all')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">🪸 OCEAN</span>
+            <h3 class="cn-title">Coral Reef<br>Crisis</h3>
+            <p class="cn-hook">Coral reefs are the rainforests of the sea and they're bleaching.</p>
+            <ul class="cn-pts">
+              <li>Support 25% of all marine species on &lt;1% of ocean floor</li>
+              <li>50% of the Great Barrier Reef bleached since 2016</li>
+              <li>At 2°C warming, 99% of coral reefs will disappear</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip red">50% GBR bleached</span><span class="cn-chip blue">25% marine species</span></div>
+          </div>
+          <div class="cn-num-badge">01</div>
+        </div>
+
+        <div class="cn-card" data-index="1">
+          <div class="cn-bg" style="background-image:url('https://plus.unsplash.com/premium_photo-1664012343376-fa9647b9d897?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">🧊 POLAR</span>
+            <h3 class="cn-title">Melting Arctic<br>&amp; Antarctic</h3>
+            <p class="cn-hook">The Arctic warms 4× faster than the rest of the planet.</p>
+            <ul class="cn-pts">
+              <li>Summer sea ice declined 40%+ since 1979</li>
+              <li>Permafrost melt releases methane, dangerous for the environment.</p>
+
+              </li>
+              <li>Polar bears, walruses &amp; foxes losing critical habitat</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip red">40% ice lost</span><span class="cn-chip orange">4× faster warming</span></div>
+          </div>
+          <div class="cn-num-badge">02</div>
+        </div>
+
+        <div class="cn-card" data-index="2">
+          <div class="cn-bg" style="background-image:url('https://plus.unsplash.com/premium_photo-1687428554388-395f7f690ddb?q=80&w=885&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">🌿 FOREST</span>
+            <h3 class="cn-title">Tropical<br>Rainforests</h3>
+            <p class="cn-hook">The Amazon holds 10% of all species and it's near a tipping point.</p>
+            <ul class="cn-pts">
+              <li>Deforestation pushing forests toward permanent savanna</li>
+              <li>Centuries of stored carbon at risk of release</li>
+              <li>Indigenous communities and biodiversity under threat</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip orange">10% all species</span><span class="cn-chip blue">Tipping point near</span></div>
+          </div>
+          <div class="cn-num-badge">03</div>
+        </div>
+
+        <div class="cn-card" data-index="3">
+          <div class="cn-bg" style="background-image:url('https://images.pexels.com/photos/7747613/pexels-photo-7747613.jpeg?_gl=1*sgg281*_ga*NTMxNjM0MzUxLjE3NzQ0MjYzNzY.*_ga_8JE65Q40S6*czE3NzQ0NTg0MTMkbzIkZzEkdDE3NzQ0NTg3NDIkajQyJGwwJGgw')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">💧 WETLANDS</span>
+            <h3 class="cn-title">Disappearing<br>Wetlands</h3>
+            <p class="cn-hook">Wetlands store twice the carbon of all forests combined.</p>
+            <ul class="cn-pts">
+              <li>35% of world's wetlands lost since 1900</li>
+              <li>Cover only 6% of Earth yet absorb massive carbon</li>
+              <li>Critical for flood protection and freshwater supply</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip red">35% lost since 1900</span><span class="cn-chip blue">2× carbon storage</span></div>
+          </div>
+          <div class="cn-num-badge">04</div>
+        </div>
+
+        <div class="cn-card" data-index="4">
+          <div class="cn-bg" style="background-image:url('https://images.pexels.com/photos/4556928/pexels-photo-4556928.jpeg?_gl=1*1sr4mbo*_ga*NTMxNjM0MzUxLjE3NzQ0MjYzNzY.*_ga_8JE65Q40S6*czE3NzQ0NTg0MTMkbzIkZzEkdDE3NzQ0NTg4MjQkajQyJGwwJGgw')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">🦁 GRASSLAND</span>
+            <h3 class="cn-title">Savanna &amp;<br>Grasslands</h3>
+            <p class="cn-hook">Africa's iconic wildlife faces unprecedented pressure.</p>
+            <ul class="cn-pts">
+              <li>Savannas cover 20% of Earth's land surface</li>
+              <li>Overgrazing &amp; agriculture degrading ecosystems fast</li>
+              <li>Elephants, lions &amp; cheetahs losing critical territory</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip orange">20% of Earth's land</span></div>
+          </div>
+          <div class="cn-num-badge">05</div>
+        </div>
+
+        <div class="cn-card" data-index="5">
+          <div class="cn-bg" style="background-image:url('https://images.pexels.com/photos/35994514/pexels-photo-35994514.jpeg?_gl=1*1xkb5vt*_ga*NTMxNjM0MzUxLjE3NzQ0MjYzNzY.*_ga_8JE65Q40S6*czE3NzQ0NTg0MTMkbzIkZzEkdDE3NzQ0NTg4ODEkajQ5JGwwJGgw')"></div>
+          <div class="cn-fog"></div>
+          <div class="cn-glitch"></div>
+          <div class="cn-body">
+            <span class="cn-tag">🏔️ ALPINE</span>
+            <h3 class="cn-title">Mountain Glaciers<br>&amp; Freshwater</h3>
+            <p class="cn-hook">2 billion people depend on glaciers that are rapidly disappearing.</p>
+            <ul class="cn-pts">
+              <li>90%+ of world's glaciers in retreat</li>
+              <li>Hindu Kush Himalaya could lose ⅔ of glaciers by 2100</li>
+              <li>Seasonal freshwater cycles disrupted for hundreds of millions</li>
+            </ul>
+            <div class="cn-chips"><span class="cn-chip red">90%+ retreating</span><span class="cn-chip blue">2B people at risk</span></div>
+          </div>
+          <div class="cn-num-badge">06</div>
+        </div>
+
+      </div><!-- /track -->
+
+      <div class="cn-dots" id="cnEcoDots"></div>
+
+    </div><!-- /stage -->
+  </div>
+
+  <!-- TAB: SOLUTIONS — Floating Objects Interactive -->
+  <div id="tab-solutions" class="tab-content">
+    <section class="sol-universe" id="solUniverse">
+
+      <!-- Ambient glow that spreads when item clicked -->
+      <div class="sol-ambient" id="solAmbient"></div>
+
+      <!-- Floating objects -->
+      <div class="sol-object" id="solObj0" data-index="0" onclick="solOpen(0)">
+        <div class="sol-glow" style="--gc:#ffd600"></div>
+        <!-- Sun SVG -->
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <circle cx="60" cy="60" r="28" fill="#ffd600" opacity="0.95"/>
+          <circle cx="60" cy="60" r="22" fill="#ffea00"/>
+          <circle cx="60" cy="60" r="16" fill="#fff59d"/>
+          <!-- Rays -->
+          <g stroke="#ffd600" stroke-width="4" stroke-linecap="round">
+            <line x1="60" y1="8"  x2="60" y2="20"/>
+            <line x1="60" y1="100" x2="60" y2="112"/>
+            <line x1="8"  y1="60" x2="20" y2="60"/>
+            <line x1="100" y1="60" x2="112" y2="60"/>
+            <line x1="23" y1="23" x2="32" y2="32"/>
+            <line x1="88" y1="88" x2="97" y2="97"/>
+            <line x1="97" y1="23" x2="88" y2="32"/>
+            <line x1="23" y1="97" x2="32" y2="88"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="sol-object" id="solObj1" data-index="1" onclick="solOpen(1)">
+        <div class="sol-glow" style="--gc:#1b5e20"></div>
+        <!-- Tree SVG -->
+        <svg viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <rect x="52" y="100" width="16" height="36" rx="4" fill="#4e342e"/>
+          <ellipse cx="60" cy="90" rx="42" ry="35" fill="#1b5e20" opacity="0.8"/>
+          <ellipse cx="40" cy="80" rx="32" ry="26" fill="#2e7d32"/>
+          <ellipse cx="80" cy="78" rx="32" ry="26" fill="#2e7d32"/>
+          <ellipse cx="60" cy="60" rx="36" ry="30" fill="#388e3c"/>
+          <ellipse cx="45" cy="48" rx="26" ry="22" fill="#43a047"/>
+          <ellipse cx="75" cy="46" rx="26" ry="22" fill="#43a047"/>
+          <ellipse cx="60" cy="34" rx="28" ry="24" fill="#4caf50"/>
+          <ellipse cx="60" cy="20" rx="18" ry="15" fill="#66bb6a"/>
+        </svg>
+      </div>
+
+      <div class="sol-object" id="solObj2" data-index="2" onclick="solOpen(2)">
+        <div class="sol-glow" style="--gc:#b0bec5"></div>
+        <!-- Building SVG -->
+        <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <rect x="20" y="40" width="60" height="100" rx="2" fill="#37474f"/>
+          <rect x="28" y="50" width="44" height="90" rx="2" fill="#455a64"/>
+          <!-- Windows -->
+          <g fill="#80deea" opacity="0.7">
+            <rect x="34" y="58" width="10" height="8" rx="1"/>
+            <rect x="50" y="58" width="10" height="8" rx="1"/>
+            <rect x="34" y="74" width="10" height="8" rx="1"/>
+            <rect x="50" y="74" width="10" height="8" rx="1"/>
+            <rect x="34" y="90" width="10" height="8" rx="1"/>
+            <rect x="50" y="90" width="10" height="8" rx="1"/>
+            <rect x="34" y="106" width="10" height="8" rx="1"/>
+            <rect x="50" y="106" width="10" height="8" rx="1"/>
+          </g>
+          <!-- Antenna -->
+          <rect x="47" y="15" width="6" height="28" rx="2" fill="#546e7a"/>
+          <circle cx="50" cy="13" r="5" fill="#78909c"/>
+          <!-- Roof solar panels -->
+          <rect x="30" y="38" width="18" height="6" rx="1" fill="#42a5f5" opacity="0.8"/>
+          <rect x="52" y="38" width="18" height="6" rx="1" fill="#42a5f5" opacity="0.8"/>
+        </svg>
+      </div>
+
+      <div class="sol-object" id="solObj3" data-index="3" onclick="solOpen(3)">
+        <div class="sol-glow" style="--gc:#e0e0e0"></div>
+        <!-- Sack / agriculture bag SVG -->
+        <svg viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <!-- Bag body -->
+          <ellipse cx="55" cy="80" rx="38" ry="44" fill="#f5f5f5" opacity="0.95"/>
+          <ellipse cx="55" cy="80" rx="34" ry="40" fill="#eeeeee"/>
+          <!-- Tie at top -->
+          <ellipse cx="55" cy="38" rx="16" ry="8" fill="#bdbdbd"/>
+          <path d="M39 38 Q55 28 71 38" stroke="#9e9e9e" stroke-width="3" fill="none"/>
+          <!-- Cross-stitch texture -->
+          <g stroke="#bdbdbd" stroke-width="1.5" opacity="0.5">
+            <line x1="30" y1="65" x2="80" y2="65"/>
+            <line x1="24" y1="80" x2="86" y2="80"/>
+            <line x1="28" y1="95" x2="82" y2="95"/>
+            <line x1="55" y1="42" x2="55" y2="118"/>
+          </g>
+          <!-- Leaf detail -->
+          <path d="M44 72 Q55 58 66 72 Q55 80 44 72Z" fill="#a5d6a7" opacity="0.6"/>
+        </svg>
+      </div>
+
+      <div class="sol-object" id="solObj4" data-index="4" onclick="solOpen(4)">
+        <div class="sol-glow" style="--gc:#00c853"></div>
+        <!-- Trash bin SVG -->
+        <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <!-- Lid -->
+          <rect x="15" y="20" width="70" height="14" rx="5" fill="#1b5e20"/>
+          <rect x="38" y="12" width="24" height="12" rx="4" fill="#2e7d32"/>
+          <!-- Body -->
+          <path d="M22 34 L26 120 Q50 128 74 120 L78 34 Z" fill="#2e7d32"/>
+          <path d="M28 34 L31 115 Q50 122 69 115 L72 34 Z" fill="#388e3c"/>
+          <!-- Lines -->
+          <g stroke="#1b5e20" stroke-width="2">
+            <line x1="40" y1="44" x2="38" y2="112"/>
+            <line x1="50" y1="44" x2="50" y2="114"/>
+            <line x1="60" y1="44" x2="62" y2="112"/>
+          </g>
+          <!-- Recycle symbol -->
+          <text x="50" y="85" text-anchor="middle" font-size="22" fill="#a5d6a7" opacity="0.8">♻</text>
+        </svg>
+      </div>
+
+      <div class="sol-object" id="solObj5" data-index="5" onclick="solOpen(5)">
+        <div class="sol-glow" style="--gc:#0288d1"></div>
+        <!-- Coral SVG -->
+        <svg viewBox="0 0 120 130" xmlns="http://www.w3.org/2000/svg" class="sol-svg">
+          <!-- Base rock -->
+          <ellipse cx="60" cy="118" rx="45" ry="10" fill="#0277bd" opacity="0.5"/>
+          <!-- Coral branches -->
+          <path d="M60 110 Q60 80 55 60 Q50 40 45 20" stroke="#0288d1" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M60 110 Q60 80 65 60 Q70 40 75 20" stroke="#0288d1" stroke-width="7" fill="none" stroke-linecap="round"/>
+          <path d="M55 80 Q42 70 30 65" stroke="#0288d1" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M65 80 Q78 70 90 65" stroke="#0288d1" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M52 60 Q40 50 32 42" stroke="#039be5" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <path d="M68 60 Q80 50 88 42" stroke="#039be5" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- Bulbs at tips -->
+          <g fill="#29b6f6">
+            <circle cx="45" cy="20" r="7"/>
+            <circle cx="75" cy="20" r="7"/>
+            <circle cx="30" cy="65" r="5"/>
+            <circle cx="90" cy="65" r="5"/>
+            <circle cx="32" cy="42" r="4"/>
+            <circle cx="88" cy="42" r="4"/>
+          </g>
+          <!-- Small fish -->
+          <ellipse cx="22" cy="95" rx="8" ry="5" fill="#80d8ff" opacity="0.7"/>
+          <path d="M14 95 L8 90 L8 100 Z" fill="#80d8ff" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <!-- Click hint -->
+      <div class="sol-hint" id="solHint">
+        <span class="sol-hint-pulse"></span>
+        Click any element to explore
+      </div>
+
+      <!-- Info card overlay -->
+      <div class="sol-card-overlay" id="solCardOverlay" onclick="solClose(event)">
+        <div class="sol-card" id="solCard" onclick="event.stopPropagation()">
+          <button class="sol-close" onclick="solClose()">✕</button>
+          <div class="sol-card-icon" id="solCardIcon"></div>
+          <div class="sol-card-content">
+            <span class="sol-card-label" id="solCardLabel"></span>
+            <h3 class="sol-card-title" id="solCardTitle"></h3>
+            <p class="sol-card-text" id="solCardText"></p>
+            <div class="sol-card-bar-wrap">
+              <div class="sol-card-bar" id="solCardBar"></div>
+            </div>
+            <span class="sol-card-impact" id="solCardImpact"></span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- TAB: ACTION -->
+  <div id="tab-action" class="tab-content">
+
+    <section class="section dark">
+      <div class="section-inner">
+        <span class="label" data-aos="fade-up">YOU CAN MAKE A DIFFERENCE</span>
+        <h2 data-aos="fade-up">How to Take Action</h2>
+        <p class="section-sub" data-aos="fade-up">Individual action, multiplied by millions of people, creates
+          transformational change. Here's where to start.</p>
+
+        <div class="action-grid" data-aos="fade-up">
+          <div class="action-card high">
+            <div class="action-level">⚡ HIGH IMPACT</div>
+            <h3>Switch to Renewable Energy</h3>
+            <p>Contact your energy provider to switch to a green tariff, install solar panels, or advocate for renewable
+              energy in your community. This single change can reduce your carbon footprint by up to 1.5 tonnes
+              CO₂/year.</p>
+          </div>
+          <div class="action-card high">
+            <div class="action-level">⚡ HIGH IMPACT</div>
+            <h3>Reduce Air Travel &amp; Car Use</h3>
+            <p>A single long-haul flight can produce more CO₂ than months of driving. Take trains, cycle, walk, or use
+              public transit. If you must fly, consider carbon offset programs to neutralize the impact.</p>
+          </div>
+          <div class="action-card medium">
+            <div class="action-level">🔶 MEDIUM IMPACT</div>
+            <h3>Shift to a Plant-Rich Diet</h3>
+            <p>Meat and dairy production accounts for 14.5% of global greenhouse gas emissions. Reducing red meat
+              consumption even one day per week significantly lowers your personal carbon footprint and reduces water
+              usage.</p>
+          </div>
+          <div class="action-card medium">
+            <div class="action-level">🔶 MEDIUM IMPACT</div>
+            <h3>Cut Plastic Use</h3>
+            <p>Carry reusable bags, bottles, and containers. Avoid single-use plastics. Support brands that use
+              sustainable packaging. Participate in local beach and river cleanups to prevent plastic from reaching the
+              ocean.</p>
+          </div>
+          <div class="action-card low">
+            <div class="action-level">🟢 EVERYDAY ACTION</div>
+            <h3>Conserve Energy at Home</h3>
+            <p>Switch to LED bulbs, unplug devices not in use, use energy-efficient appliances, and set thermostats
+              wisely. Small changes add up efficient homes can cut energy bills by 30% and significantly reduce
+              emissions.</p>
+          </div>
+          <div class="action-card low">
+            <div class="action-level">🟢 EVERYDAY ACTION</div>
+            <h3>Spread Awareness &amp; Vote Green</h3>
+            <p>Talk to friends and family about climate change. Share reliable information. Most importantly, vote for
+              politicians who prioritize climate policy government action at scale is essential for meeting global
+              climate targets.</p>
+          </div>
+        </div>
+
+        <div class="pledge-box" data-aos="fade-up">
+          <h3>🌱 Take the Planet Pledge</h3>
+          <p>Commit to at least one action that will reduce your impact on the environment. Share it with friends and
+            inspire others to join the movement.</p>
+          <div class="pledge-options">
+            <label><input type="checkbox"> I will reduce my meat consumption</label>
+            <label><input type="checkbox"> I will use reusable bags and bottles</label>
+            <label><input type="checkbox"> I will switch to renewable energy</label>
+            <label><input type="checkbox"> I will reduce air travel this year</label>
+            <label><input type="checkbox"> I will participate in a local cleanup</label>
+            <label><input type="checkbox"> I will talk about climate with others</label>
+          </div>
+          <button class="btn btn-primary" onclick="takePledge()">✊ I Take This Pledge</button>
+          <p id="pledgeMsg" style="display:none;margin-top:16px;color:#00e676;font-weight:700;">🌍 Thank you! Every
+            action counts. Share this pledge with your friends!</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         TRASH SORTING GAME
+    ══════════════════════════════════════ -->
+    <section class="section tsg-section">
+      <div class="section-inner">
+        <span class="label" data-aos="fade-up">MINI GAME</span>
+        <h2 data-aos="fade-up" style="text-align:center;">♻️ Waste Sorting Challenge</h2>
+        <p class="section-sub" data-aos="fade-up">Drag & drop (or tap) each item into the correct bin before time runs out. Combos earn bonus points!</p>
+
+        <div class="tsg-wrap" data-aos="fade-up">
+
+          <!-- HUD -->
+          <div class="tsg-hud">
+            <div class="tsg-stat">
+              <div class="tsg-stat-label">SCORE</div>
+              <div class="tsg-stat-val" id="tsgScore">0</div>
+            </div>
+            <div class="tsg-stat center">
+              <div class="tsg-stat-label">TIME</div>
+              <div class="tsg-stat-val" id="tsgTimer">45</div>
+              <div class="tsg-timer-bar-wrap"><div class="tsg-timer-bar" id="tsgTimerBar"></div></div>
+            </div>
+            <div class="tsg-stat right">
+              <div class="tsg-stat-label">COMBO</div>
+              <div class="tsg-stat-val" id="tsgCombo">x1</div>
+            </div>
+          </div>
+
+          <!-- Item stage -->
+          <div class="tsg-stage" id="tsgStage">
+            <div class="tsg-idle" id="tsgIdle">
+              <p>Sort waste into the correct bins!</p>
+              <button class="tsg-start-btn" id="tsgStartBtn" onclick="tsgInit()">▶ Start Mission</button>
+            </div>
+            <div class="tsg-item-wrap" id="tsgItemWrap" style="display:none;">
+              <div class="tsg-item" id="tsgItem" draggable="true">?</div>
+              <div class="tsg-item-hint" id="tsgItemHint"></div>
+            </div>
+            <div class="tsg-feedback" id="tsgFeedback"></div>
+          </div>
+
+          <!-- Bins -->
+          <div class="tsg-bins">
+            <div class="tsg-bin organic" id="binOrganic" data-type="organic"
+                 ondragover="event.preventDefault()" ondrop="tsgDrop(event,'organic')" onclick="tsgClick('organic')">
+              <div class="tsg-bin-icon">🌿</div>
+              <div class="tsg-bin-label">Organic</div>
+              <div class="tsg-bin-glow"></div>
+            </div>
+            <div class="tsg-bin paper" id="binPaper" data-type="paper"
+                 ondragover="event.preventDefault()" ondrop="tsgDrop(event,'paper')" onclick="tsgClick('paper')">
+              <div class="tsg-bin-icon">📄</div>
+              <div class="tsg-bin-label">Paper</div>
+              <div class="tsg-bin-glow"></div>
+            </div>
+            <div class="tsg-bin plastic" id="binPlastic" data-type="plastic"
+                 ondragover="event.preventDefault()" ondrop="tsgDrop(event,'plastic')" onclick="tsgClick('plastic')">
+              <div class="tsg-bin-icon">🥤</div>
+              <div class="tsg-bin-label">Plastic</div>
+              <div class="tsg-bin-glow"></div>
+            </div>
+            <div class="tsg-bin metal" id="binMetal" data-type="metal"
+                 ondragover="event.preventDefault()" ondrop="tsgDrop(event,'metal')" onclick="tsgClick('metal')">
+              <div class="tsg-bin-icon">🥫</div>
+              <div class="tsg-bin-label">Metal</div>
+              <div class="tsg-bin-glow"></div>
+            </div>
+          </div>
+
+          <!-- Result screen (hidden) -->
+          <div class="tsg-result" id="tsgResult" style="display:none;">
+            <div class="tsg-result-inner">
+              <div class="tsg-result-emoji" id="tsgResultEmoji">🏆</div>
+              <h3 id="tsgResultTitle">Mission Complete!</h3>
+              <p id="tsgResultSub"></p>
+              <div class="tsg-result-stats">
+                <div class="tsg-rs"><span id="tsgRScore">0</span><small>Final Score</small></div>
+                <div class="tsg-rs"><span id="tsgRCorrect">0</span><small>Correct</small></div>
+                <div class="tsg-rs"><span id="tsgRWrong">0</span><small>Wrong</small></div>
+              </div>
+              <button class="tsg-start-btn" onclick="tsgInit()">🔄 Play Again</button>
+            </div>
+          </div>
+
+        </div><!-- /tsg-wrap -->
+      </div>
+    </section>
+
+
+  </div>
+
+</div>
+  
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">🌍 Future Earth</span>
+        <p>An environmental awareness project dedicated to educating people about climate change and inspiring action
+          for a sustainable future.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="content.html">Content</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://instagram.com/steven_alberth313" target="_blank">@steven_alberth313</a></li>
+          <li><a href="https://instagram.com/adhitomov" target="_blank">@adhitomov</a></li>
+          <li><a href="https://instagram.com/raphadriann" target="_blank">@raphadriann</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Future Earth Interactive Project. Built with love for our planet.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    function toggleMenu() { document.getElementById('navMenu').classList.toggle('open'); }
+
+    function showTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + tab).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function takePledge() {
+      const checked = document.querySelectorAll('.pledge-options input:checked').length;
+      if (checked === 0) { alert('Please select at least one pledge!'); return; }
+      document.getElementById('pledgeMsg').style.display = 'block';
+    }
+  
+    /* ══════════════════════════════════════
+       CN — Cinematic Content Carousel
+    ══════════════════════════════════════ */
+    (function() {
+
+      /* ── Count-up ── */
+      function countUp(el) {
+        var target  = parseFloat(el.dataset.target);
+        var suffix  = el.dataset.suffix  || '';
+        var prefix  = el.dataset.prefix  || '';
+        var decimal = el.dataset.decimal ? parseInt(el.dataset.decimal) : 0;
+        var isInt   = el.dataset.isint;
+        var steps = 50, step = 0;
+        var dur = target > 500 ? 1800 : 1100;
+        clearInterval(el._ct);
+        el._ct = setInterval(function() {
+          step++;
+          var v = target * (step / steps);
+          el.textContent = isInt
+            ? Math.round(v).toLocaleString()
+            : prefix + (decimal ? v.toFixed(decimal) : Math.round(v)) + suffix;
+          if (step >= steps) {
+            el.textContent = isInt
+              ? target.toLocaleString()
+              : prefix + (decimal ? target.toFixed(decimal) : target) + suffix;
+            clearInterval(el._ct);
+          }
+        }, dur / steps);
+      }
+
+      var ribbonTriggered = false;
+      var ribbon = document.querySelector('.cn-ribbon');
+      if (ribbon) {
+        new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting && !ribbonTriggered) {
+            ribbonTriggered = true;
+            ribbon.querySelectorAll('.cn-rnum').forEach(countUp);
+          }
+        }, { threshold: 0.4 }).observe(ribbon);
+      }
+
+      /* ── Build a carousel ── */
+      function buildCarousel(stageId, trackId, prevId, nextId, dotsId) {
+        var stage  = document.getElementById(stageId);
+        var track  = document.getElementById(trackId);
+        var prev   = document.getElementById(prevId);
+        var next   = document.getElementById(nextId);
+        var dotsEl = document.getElementById(dotsId);
+        if (!stage || !track) return;
+
+        var cards = Array.from(track.querySelectorAll('.cn-card'));
+        var total = cards.length;
+        var cur = 0;
+        var animating = false;
+
+        /* Build dots */
+        cards.forEach(function(_, i) {
+          var d = document.createElement('div');
+          d.className = 'cn-dot' + (i === 0 ? ' cn-dot-active' : '');
+          d.addEventListener('click', function() { go(i); });
+          dotsEl.appendChild(d);
+        });
+        var dots = Array.from(dotsEl.querySelectorAll('.cn-dot'));
+
+        function updateLayout(idx) {
+          cards.forEach(function(c, i) {
+            var diff = i - idx;
+            c.classList.remove('cn-active','cn-side-l','cn-side-r','cn-far');
+            if (diff === 0)        c.classList.add('cn-active');
+            else if (diff === -1)  c.classList.add('cn-side-l');
+            else if (diff === 1)   c.classList.add('cn-side-r');
+            else                   c.classList.add('cn-far');
+          });
+          dots.forEach(function(d,i){ d.classList.toggle('cn-dot-active', i === idx); });
+          if (prev) prev.disabled = idx === 0;
+          if (next) next.disabled = idx === total - 1;
+        }
+
+        function glitch(card) {
+          var g = card.querySelector('.cn-glitch');
+          if (!g) return;
+          g.classList.remove('cn-glitch-on');
+          void g.offsetWidth;
+          g.classList.add('cn-glitch-on');
+          setTimeout(function(){ g.classList.remove('cn-glitch-on'); }, 480);
+        }
+
+        function go(idx) {
+          if (idx === cur || animating || idx < 0 || idx >= total) return;
+          animating = true;
+          var next_card = cards[idx];
+          glitch(next_card);
+          cur = idx;
+          updateLayout(cur);
+          setTimeout(function(){ animating = false; }, 600);
+        }
+
+        if (prev) prev.addEventListener('click', function(){ go(cur - 1); });
+        if (next) next.addEventListener('click', function(){ go(cur + 1); });
+
+        /* Keyboard nav (only when stage in view) */
+        document.addEventListener('keydown', function(e) {
+          var r = stage.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight) return;
+          if (!stage.closest('.tab-content.active')) return;
+          if (e.key === 'ArrowRight') go(cur + 1);
+          if (e.key === 'ArrowLeft')  go(cur - 1);
+        });
+
+        /* Drag / swipe */
+        var dragX = null;
+        stage.addEventListener('mousedown',  function(e){ dragX = e.clientX; });
+        stage.addEventListener('touchstart', function(e){ dragX = e.touches[0].clientX; }, {passive:true});
+        function endDrag(ex) {
+          if (dragX === null) return;
+          var d = ex - dragX;
+          if (Math.abs(d) > 55) d < 0 ? go(cur+1) : go(cur-1);
+          dragX = null;
+        }
+        stage.addEventListener('mouseup',   function(e){ endDrag(e.clientX); });
+        stage.addEventListener('touchend',  function(e){ endDrag(e.changedTouches[0].clientX); });
+
+        /* Click on side cards to navigate */
+        cards.forEach(function(c, i) {
+          c.addEventListener('click', function() {
+            if (i !== cur) go(i);
+          });
+        });
+
+        updateLayout(0);
+      }
+
+      buildCarousel('cnThreatStage','cnThreatTrack','cnThreatPrev','cnThreatNext','cnThreatDots');
+      buildCarousel('cnEcoStage',   'cnEcoTrack',   'cnEcoPrev',  'cnEcoNext',  'cnEcoDots');
+
+    })();
+
+    /* ═══════════════════════════════════════════════════
+      TRASH SORTING GAME (TSG) — Enhanced
+    ═══════════════════════════════════════════════════ */
+    const TSG_ITEMS = [
+      // ORGANIC
+      { icon: '🍎', label: 'Apple core',      type: 'organic' },
+      { icon: '🍌', label: 'Banana peel',     type: 'organic' },
+      { icon: '🥦', label: 'Veggie scraps',   type: 'organic' },
+      { icon: '🍃', label: 'Fallen leaves',   type: 'organic' },
+      { icon: '☕', label: 'Coffee grounds',  type: 'organic' },
+      { icon: '🥚', label: 'Eggshells',       type: 'organic' },
+      // PAPER
+      { icon: '📰', label: 'Newspaper',       type: 'paper' },
+      { icon: '📦', label: 'Cardboard box',   type: 'paper' },
+      { icon: '📜', label: 'Paper roll',      type: 'paper' },
+      { icon: '✉️', label: 'Envelope',        type: 'paper' },
+      { icon: '📚', label: 'Old magazine',    type: 'paper' },
+      { icon: '🗒️', label: 'Notepad',         type: 'paper' },
+      // PLASTIC
+      { icon: '🥤', label: 'Plastic cup',     type: 'plastic' },
+      { icon: '🛍️', label: 'Plastic bag',     type: 'plastic' },
+      { icon: '🧴', label: 'Shampoo bottle',  type: 'plastic' },
+      { icon: '🍼', label: 'Baby bottle',     type: 'plastic' },
+      { icon: '🪥', label: 'Toothbrush',      type: 'plastic' },
+      { icon: '💊', label: 'Pill container',  type: 'plastic' },
+      // METAL
+      { icon: '🥫', label: 'Tin can',         type: 'metal' },
+      { icon: '🔋', label: 'Battery',         type: 'metal' },
+      { icon: '🍴', label: 'Metal fork',      type: 'metal' },
+      { icon: '📎', label: 'Paperclip',       type: 'metal' },
+      { icon: '🪙', label: 'Coin',            type: 'metal' },
+      { icon: '🔩', label: 'Bolt',            type: 'metal' },
+    ];
+
+    const TSG_DURATION = 45;
+    let tsgPlaying = false;
+    let tsgScore    = 0;
+    let tsgCombo    = 1;
+    let tsgCorrect  = 0;
+    let tsgWrong    = 0;
+    let tsgTimeLeft = TSG_DURATION;
+    let tsgInterval = null;
+    let tsgCurrent  = null;
+    let tsgFbTimer  = null;
+
+    function tsgInit() {
+      tsgPlaying  = true;
+      tsgScore    = 0;
+      tsgCombo    = 1;
+      tsgCorrect  = 0;
+      tsgWrong    = 0;
+      tsgTimeLeft = TSG_DURATION;
+
+      // Reset UI
+      document.getElementById('tsgScore').textContent  = 0;
+      document.getElementById('tsgTimer').textContent  = TSG_DURATION;
+      document.getElementById('tsgCombo').textContent  = 'x1';
+      document.getElementById('tsgTimerBar').style.width = '100%';
+      document.getElementById('tsgTimerBar').style.background = 'linear-gradient(90deg,#00e676,#1565c0)';
+      document.getElementById('tsgResult').style.display  = 'none';
+      document.getElementById('tsgIdle').style.display    = 'none';
+      document.getElementById('tsgItemWrap').style.display = 'flex';
+      document.getElementById('tsgItemWrap').style.flexDirection = 'column';
+      document.getElementById('tsgItemWrap').style.alignItems = 'center';
+      document.getElementById('tsgFeedback').textContent  = '';
+      document.getElementById('tsgFeedback').className    = 'tsg-feedback';
+
+      tsgSpawn();
+
+      clearInterval(tsgInterval);
+      tsgInterval = setInterval(() => {
+        tsgTimeLeft--;
+        const pct = (tsgTimeLeft / TSG_DURATION) * 100;
+        const bar = document.getElementById('tsgTimerBar');
+        bar.style.width = pct + '%';
+        if (pct < 30) bar.style.background = 'linear-gradient(90deg,#e53935,#ff8a65)';
+        else if (pct < 60) bar.style.background = 'linear-gradient(90deg,#ffca28,#1565c0)';
+        document.getElementById('tsgTimer').textContent = tsgTimeLeft;
+        if (tsgTimeLeft <= 0) tsgEnd();
+      }, 1000);
+    }
+
+    function tsgSpawn() {
+      if (!tsgPlaying) return;
+      const pool = TSG_ITEMS;
+      tsgCurrent = pool[Math.floor(Math.random() * pool.length)];
+      const el = document.getElementById('tsgItem');
+      el.style.transform = 'scale(0) rotate(-15deg)';
+      el.style.opacity   = '0';
+      setTimeout(() => {
+        el.textContent  = tsgCurrent.icon;
+        el.style.transition = 'transform .3s cubic-bezier(.34,1.56,.64,1), opacity .2s';
+        el.style.transform  = 'scale(1) rotate(0deg)';
+        el.style.opacity    = '1';
+      }, 80);
+      document.getElementById('tsgItemHint').textContent = tsgCurrent.label;
+
+      // Drag support
+      el.setAttribute('draggable', 'true');
+      el.ondragstart = (e) => {
+        e.dataTransfer.setData('text/plain', 'waste');
+        // Highlight valid bins
+        document.querySelectorAll('.tsg-bin').forEach(b => b.classList.add('highlight'));
+      };
+      document.querySelectorAll('.tsg-bin').forEach(b => {
+        b.ondragend = () => document.querySelectorAll('.tsg-bin').forEach(x => x.classList.remove('highlight'));
+      });
+    }
+
+    function tsgDrop(event, type) {
+      event.preventDefault();
+      document.querySelectorAll('.tsg-bin').forEach(b => b.classList.remove('highlight'));
+      tsgEval(type);
+    }
+
+    function tsgClick(type) {
+      if (!tsgPlaying || !tsgCurrent) return;
+      tsgEval(type);
+    }
+
+    function tsgEval(type) {
+      if (!tsgPlaying || !tsgCurrent) return;
+      const correct = type === tsgCurrent.type;
+      const bin = document.getElementById('bin' + type.charAt(0).toUpperCase() + type.slice(1));
+
+      if (correct) {
+        tsgCombo++;
+        const pts = 10 * Math.min(tsgCombo - 1 || 1, tsgCombo);
+        tsgScore   += pts;
+        tsgCorrect++;
+        bin.classList.add('correct-flash');
+        tsgShowFeedback('✅ +' + pts + (tsgCombo > 2 ? '  COMBO x' + tsgCombo + '!' : ''), 'correct');
+      } else {
+        tsgCombo = 1;
+        tsgScore = Math.max(0, tsgScore - 5);
+        tsgWrong++;
+        bin.classList.add('wrong-flash');
+        tsgShowFeedback('❌ Wrong bin! -5', 'wrong');
+      }
+
+      setTimeout(() => bin.classList.remove('correct-flash', 'wrong-flash'), 450);
+
+      const comboEl = document.getElementById('tsgCombo');
+      comboEl.textContent = 'x' + tsgCombo;
+      comboEl.classList.remove('combo-pop');
+      void comboEl.offsetWidth;
+      if (tsgCombo > 1) comboEl.classList.add('combo-pop');
+
+      document.getElementById('tsgScore').textContent = tsgScore;
+      setTimeout(tsgSpawn, 300);
+    }
+
+    function tsgShowFeedback(msg, cls) {
+      clearTimeout(tsgFbTimer);
+      const el = document.getElementById('tsgFeedback');
+      el.textContent = msg;
+      el.className   = 'tsg-feedback ' + cls + ' show';
+      tsgFbTimer = setTimeout(() => el.classList.remove('show'), 700);
+    }
+
+    function tsgEnd() {
+      clearInterval(tsgInterval);
+      tsgPlaying = false;
+      tsgCurrent = null;
+
+      document.getElementById('tsgItemWrap').style.display = 'none';
+      const result = document.getElementById('tsgResult');
+
+      // Rating
+      const acc = tsgCorrect + tsgWrong > 0
+        ? Math.round((tsgCorrect / (tsgCorrect + tsgWrong)) * 100) : 0;
+      let emoji = '🌱', title = 'Good Start!', sub = 'Keep learning about waste sorting!';
+      if (tsgScore >= 200) { emoji = '🏆'; title = 'Eco Champion!';   sub = 'Outstanding! You are a waste-sorting master.'; }
+      else if (tsgScore >= 120) { emoji = '🌍'; title = 'Planet Hero!';   sub = 'Great work! You are making the Earth cleaner.'; }
+      else if (tsgScore >= 60)  { emoji = '♻️'; title = 'Recycler!';      sub = 'Nice effort! Practice makes perfect.'; }
+
+      document.getElementById('tsgResultEmoji').textContent  = emoji;
+      document.getElementById('tsgResultTitle').textContent  = title;
+      document.getElementById('tsgResultSub').textContent    = sub + ' (' + acc + '% accuracy)';
+      document.getElementById('tsgRScore').textContent   = tsgScore;
+      document.getElementById('tsgRCorrect').textContent = tsgCorrect;
+      document.getElementById('tsgRWrong').textContent   = tsgWrong;
+
+      result.style.display = 'flex';
+    }
+
+  
+    /* ══════════════════════════════════════════════
+       SOL — Solutions Floating Objects
+    ══════════════════════════════════════════════ */
+    (function() {
+      var DATA = [
+        {
+          icon: '☀️',
+          color: '#ffd600',
+          label: 'RENEWABLE ENERGY',
+          title: 'Renewable Energy Transition',
+          text: 'Shifting from fossil fuels to solar, wind, and hydroelectric power is the single most impactful action humanity can take. Solar panel costs dropped 89% in a decade — now cheaper than coal. By 2050, renewables could power 90% of global electricity needs.',
+          impact: 'Very High',
+          bar: 92
+        },
+        {
+          icon: '🌲',
+          color: '#2e7d32',
+          label: 'REFORESTATION',
+          title: 'Reforestation & Forest Protection',
+          text: 'Planting and protecting trees is one of the most cost-effective ways to sequester carbon. A 2019 Science study found restoring 0.9 billion hectares could capture two-thirds of all CO₂ humans have emitted since the Industrial Revolution.',
+          impact: 'High',
+          bar: 78
+        },
+        {
+          icon: '🏙️',
+          color: '#b0bec5',
+          label: 'SUSTAINABLE CITIES',
+          title: 'Sustainable Cities & Urban Planning',
+          text: 'Cities account for 70% of global carbon emissions. Green architecture, public transit, bike lanes, urban forests, and energy-efficient buildings dramatically reduce footprints. Curitiba, Copenhagen, and Singapore lead the way.',
+          impact: 'High',
+          bar: 72
+        },
+        {
+          icon: '🌾',
+          color: '#e0e0e0',
+          label: 'AGRICULTURE',
+          title: 'Sustainable Agriculture & Food Systems',
+          text: 'Food production accounts for 26% of global greenhouse gas emissions. Shifting to regenerative farming, reducing meat consumption, and cutting food waste could reduce food-related emissions by up to 70%.',
+          impact: 'High',
+          bar: 68
+        },
+        {
+          icon: '♻️',
+          color: '#00c853',
+          label: 'CIRCULAR ECONOMY',
+          title: 'Circular Economy & Waste Reduction',
+          text: 'A circular economy keeps materials in use as long as possible by designing out waste. Shifting from single-use to reusable, repairable, and recyclable products reduces pollution significantly. The Netherlands leads this global transition.',
+          impact: 'Medium-High',
+          bar: 58
+        },
+        {
+          icon: '🌊',
+          color: '#0288d1',
+          label: 'OCEAN CONSERVATION',
+          title: 'Ocean Conservation & Marine Protected Areas',
+          text: 'Marine Protected Areas allow ocean ecosystems to recover. Currently only 8% of oceans are protected. The 30x30 initiative aims for 30% by 2030. Healthier oceans also absorb more CO₂, making conservation a climate solution too.',
+          impact: 'Medium-High',
+          bar: 55
+        }
+      ];
+
+      /* Float animation — give each object a unique drift pattern */
+      var positions = [
+        { x:18, y:18 }, { x:68, y:12 }, { x:40, y:55 },
+        { x:12, y:62 }, { x:72, y:60 }, { x:48, y:22 }
+      ];
+      var drifts = [
+        { tx:14, ty:10, r: 8  },
+        { tx:-10, ty:14, r:-6 },
+        { tx:12, ty:-12, r: 5 },
+        { tx:-8, ty:8,   r:-7 },
+        { tx:10, ty:-10, r: 6 },
+        { tx:-12, ty:12, r:-5 }
+      ];
+      var durations = [5.8, 7.2, 6.4, 8.0, 5.2, 6.9];
+
+      var objects = document.querySelectorAll('.sol-object');
+      objects.forEach(function(obj, i) {
+        var p = positions[i];
+        var d = drifts[i];
+        var dur = durations[i];
+        obj.style.left = p.x + '%';
+        obj.style.top  = p.y + '%';
+        obj.style.setProperty('--tx', d.tx + 'px');
+        obj.style.setProperty('--ty', d.ty + 'px');
+        obj.style.setProperty('--rot', d.r + 'deg');
+        obj.style.animationDuration = dur + 's';
+        obj.style.animationDelay = (i * 0.4) + 's';
+      });
+
+      /* ── Type-writer helper ── */
+      function typeWrite(el, text, speed) {
+        el.textContent = '';
+        var i = 0;
+        function tick() {
+          if (i < text.length) {
+            el.textContent += text[i++];
+            setTimeout(tick, speed);
+          }
+        }
+        tick();
+      }
+
+      /* ── Open card ── */
+      window.solOpen = function(idx) {
+        var d = DATA[idx];
+        var universe = document.getElementById('solUniverse');
+        var ambient  = document.getElementById('solAmbient');
+        var overlay  = document.getElementById('solCardOverlay');
+        var card     = document.getElementById('solCard');
+
+        // Spread glow
+        ambient.style.background = 'radial-gradient(circle at 50% 50%, ' + d.color + '22 0%, ' + d.color + '0a 50%, transparent 75%)';
+        ambient.classList.add('sol-ambient-on');
+        universe.style.setProperty('--active-color', d.color);
+
+        // Pulse clicked object
+        var obj = document.getElementById('solObj' + idx);
+        obj.classList.add('sol-obj-clicked');
+        setTimeout(function(){ obj.classList.remove('sol-obj-clicked'); }, 600);
+
+        // Set card accent color
+        card.style.setProperty('--card-color', d.color);
+        card.style.borderColor = d.color + '55';
+        card.style.boxShadow = '0 0 60px ' + d.color + '22, 0 24px 60px rgba(0,0,0,0.6)';
+
+        // Card icon
+        document.getElementById('solCardIcon').textContent = d.icon;
+        document.getElementById('solCardIcon').style.textShadow = '0 0 30px ' + d.color;
+
+        // Label (instant)
+        document.getElementById('solCardLabel').textContent = d.label;
+        document.getElementById('solCardLabel').style.color = d.color;
+
+        // Title type-write
+        var titleEl = document.getElementById('solCardTitle');
+        typeWrite(titleEl, d.title, 28);
+
+        // Text type-write (slight delay)
+        var textEl = document.getElementById('solCardText');
+        textEl.textContent = '';
+        setTimeout(function(){ typeWrite(textEl, d.text, 14); }, d.title.length * 28 + 100);
+
+        // Impact bar
+        var bar = document.getElementById('solCardBar');
+        bar.style.background = 'linear-gradient(90deg,' + d.color + ',' + d.color + '88)';
+        bar.style.boxShadow  = '0 0 12px ' + d.color + '88';
+        setTimeout(function(){ bar.style.width = d.bar + '%'; }, 200);
+
+        // Impact label
+        document.getElementById('solCardImpact').textContent = '⚡ Impact Level: ' + d.impact;
+        document.getElementById('solCardImpact').style.color = d.color;
+
+        // Show overlay
+        overlay.classList.add('sol-overlay-on');
+
+        // Hide hint
+        var hint = document.getElementById('solHint');
+        if (hint) hint.style.opacity = '0';
+      };
+
+      /* ── Close card ── */
+      window.solClose = function(e) {
+        if (e && e.target !== document.getElementById('solCardOverlay')) return;
+        document.getElementById('solCardOverlay').classList.remove('sol-overlay-on');
+        document.getElementById('solAmbient').classList.remove('sol-ambient-on');
+        // Reset bar
+        document.getElementById('solCardBar').style.width = '0%';
+      };
+
+      // Close on Escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          document.getElementById('solCardOverlay').classList.remove('sol-overlay-on');
+          document.getElementById('solAmbient').classList.remove('sol-ambient-on');
+        }
+      });
+
+    })();
+
+  </script>
+</body>
+
+</html>
